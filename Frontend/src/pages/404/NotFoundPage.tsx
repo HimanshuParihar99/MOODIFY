@@ -6,7 +6,7 @@ export default function NotFoundPage() {
 	const navigate = useNavigate();
 
 	return (
-		<div className='h-screen bg-neutral-900 flex items-center justify-center'>
+		<div className='h-screen bg-hero flex items-center justify-center'>
 			<div className='text-center space-y-8 px-4'>
 				{/* Large animated musical note */}
 				<div className='flex justify-center animate-bounce'>
@@ -27,7 +27,7 @@ export default function NotFoundPage() {
 					<Button
 						onClick={() => navigate(-1)}
 						variant='outline'
-						className='bg-neutral-800 hover:bg-neutral-700 text-white border-neutral-700 w-full sm:w-auto'
+						className='bg-glass2 hover:bg-neutral-700 text-white border-neutral-700 w-full sm:w-auto'
 					>
 						Go Back
 					</Button>

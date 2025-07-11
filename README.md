@@ -42,14 +42,34 @@ Refer to the `.env.example` file for all required environment variables.
 
 2. **Configure your Web Service**
    - Name: `moodify` (or your preferred name)
-   - Environment: `Node`
-   - Build Command: `npm run build`
-   - Start Command: `npm start`
+    - Environment: `Node`
+   - Build Command: `cd backend && npm install && cd ../frontend && npm install && npm run build`
+   - Start Command: `cd backend && npm start`
+   - **Important**: Do not set a custom root directory. The default root directory should be used.
    - Set the environment variables listed above
 
 3. **Deploy**
    - Click "Create Web Service"
    - Render will automatically build and deploy your application
+
+### Troubleshooting Deployment Issues
+
+#### ENOENT Error for backend/package.json
+
+If you encounter an error like this:
+```
+npm error code ENOENT
+npm error syscall open
+npm error path /opt/render/project/src/backend/package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory
+```
+
+This is caused by Render looking for files in the wrong directory. To fix this:
+
+1. Make sure you have **not** set a custom root directory in your Render configuration
+2. The build and start commands in package.json have been updated to use `cd` instead of `--prefix` to navigate directories
+3. If the issue persists, try manually setting the build and start commands in the Render dashboard instead of using render.yaml
 
 ## Local Development
 

@@ -2,9 +2,9 @@ services:
   - type: web
     name: moodify
     env: node
-    buildCommand: npm run build
-    startCommand: npm start
-    rootDirectory: .
+    buildCommand: cd backend && npm install && cd ../frontend && npm install && npm run build
+    startCommand: cd backend && npm start
+    # Do not specify rootDirectory to avoid path issues
     envVars:
       - key: NODE_ENV
         value: production

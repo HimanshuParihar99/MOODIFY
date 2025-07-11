@@ -18,10 +18,10 @@ const LeftSidebar = () => {
 	console.log({ albums });
 
 	return (
-		<div className='h-full flex flex-col gap-2'>
+		<div className='h-full bg-transparent flex flex-col gap-2'>
 			{/* Navigation menu */}
 
-			<div className='rounded-lg bg-zinc-900 p-4'>
+			<div className='rounded-lg bg-hero p-4'>
 				<div className='space-y-2 '>
 					<Link
 						to={"/"}
@@ -54,7 +54,7 @@ const LeftSidebar = () => {
 			</div>
 
 			{/* Library section */}
-			<div className='flex-1 rounded-lg bg-zinc-900 p-4'>
+			<div className='flex-1 rounded-lg p-4'>
 				<div className='flex items-center justify-between mb-4'>
 					<div className='flex items-center text-white px-2'>
 						<Library className='size-5 mr-2' />
