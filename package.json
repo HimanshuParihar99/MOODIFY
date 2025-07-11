@@ -12,6 +12,9 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@types/node": "^24.0.13",
+    "@vitejs/plugin-react": "^4.6.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.8.3"
   }
 }
